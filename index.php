@@ -1,5 +1,16 @@
 <?php
-require('Calculation.php');?>
+$foo = array('b', 'a', 'r');
+$word = '';
+foreach ($foo as $letter)
+{
+	$word += $letter;
+	echo $word;
+	echo $letter;
+}
+exit();
+require('Calculation.php');
+
+?>
 
 <form method = "post" action = "#">
 	<p> Enter a number</p><input name = "number" type ="text" />
@@ -10,7 +21,7 @@ require('Calculation.php');?>
 {
 	$input = $_POST['number'];
 	$num = new Calculation;
-	$num->doCalculation($input, 0);	
+	echo $num->doCalculation($input, 0);
 }
 else
 {

@@ -69,7 +69,8 @@ class Calculation
 			
 		for($i = 1; $i <= $multiplier; $i++)
 		{
-			echo $this->numbersToNumerals[$divider]['roman'];
+			$numeralString = $this->numbersToNumerals[$divider]['roman'];
+			$returnString = $returnString . $numeralString;
 		}
 				
 		if($remainder != 0)
@@ -77,6 +78,8 @@ class Calculation
 			$divider += 1;
 			$this->doCalculation($remainder, $divider);
 		}
+		
+		return $returnString;
 	}
 }
 ?>
