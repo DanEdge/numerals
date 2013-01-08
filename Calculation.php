@@ -36,7 +36,7 @@ class Calculation
 			),
 			7 => array(
 				'arabic' => 40,
-				'roman' => 'XV'
+				'roman' => 'XL'
 			),
 			8 => array(
 				'arabic' => 10,
