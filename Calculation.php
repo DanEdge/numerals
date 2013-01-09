@@ -64,13 +64,14 @@ class Calculation
 	public function doCalculation($input, $divider)
 	{
 		$numeralString = "";
+		$returnString = "";
 		$multiplier = $input / $this->numbersToNumerals[$divider]['arabic'];
 		$remainder =  $input % $this->numbersToNumerals[$divider]['arabic'];
 			
 		for($i = 1; $i <= $multiplier; $i++)
 		{
 			$numeralString = $this->numbersToNumerals[$divider]['roman'];
-			$returnString = $returnString . $numeralString;
+			$returnString = $numeralString . $returnString;
 		}
 				
 		if($remainder != 0)
@@ -78,7 +79,7 @@ class Calculation
 			$divider += 1;
 			$this->doCalculation($remainder, $divider);
 		}
-		
+		//echo $returnString;
 		return $returnString;
 	}
 }

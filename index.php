@@ -1,13 +1,13 @@
 <?php
-$foo = array('b', 'a', 'r');
-$word = '';
-foreach ($foo as $letter)
-{
-	$word += $letter;
-	echo $word;
-	echo $letter;
-}
-exit();
+// $foo = array('b', 'a', 'r');
+// $word = '';
+// foreach ($foo as $letter)
+// {
+	// $word += $letter;
+	// echo $word;
+	// echo $letter;
+// }
+// exit();
 require('Calculation.php');
 
 ?>
