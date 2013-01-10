@@ -65,8 +65,12 @@ class Calculation
 	{
 		$numeralString = "";
 		$returnString = "";
-		$multiplier = $input / $this->numbersToNumerals[$divider]['arabic'];
-		$remainder =  $input % $this->numbersToNumerals[$divider]['arabic'];
+		
+		// works when not calling clas method
+		//$multiplier = $input / $this->numbersToNumerals[$divider]['arabic'];
+		$multiplier = $input / 4;
+		//$remainder =  $input % $this->numbersToNumerals[$divider]['arabic'];
+		$remainder =  $input % 1;
 			
 		for($i = 1; $i <= $multiplier; $i++)
 		{
@@ -79,7 +83,7 @@ class Calculation
 			$divider += 1;
 			$this->doCalculation($remainder, $divider);
 		}
-		//echo $returnString;
+
 		return $returnString;
 	}
 }

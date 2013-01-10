@@ -21,6 +21,7 @@ require('Calculation.php');
 {
 	$input = $_POST['number'];
 	$num = new Calculation;
+	//echo gettype($num->doCalculation($input, 0));
 	echo $num->doCalculation($input, 0);
 }
 else
